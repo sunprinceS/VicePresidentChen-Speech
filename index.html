@@ -3,7 +3,6 @@
 
 <head>
    <style>
-
     *{ margin:0px; padding:px; border:none}
 
     .h1-title{
@@ -12,6 +11,24 @@
     .h1-subtitle{
          -webkit-animation-delay:    1.0s;
          -webkit-animation-duration: 3.0s;
+    }
+    .info-animate{
+        background: #F8F8F8;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a{
+        color:#FFF;
+        width:100%;
+    }
+    /*子選單背景*/
+    .dropdown .dropdown-menu{
+        background-color:#222;
+        width:100%;
+    }
+    /*滑鼠移到子選單選項出現的背景*/
+    .dropdown .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus {
+        background-image:none;
+        background-color:#006BDC;
     }
     </style> 
     
@@ -36,20 +53,20 @@
     
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     
 </head>
 
-<div id="skrollr-body">
 <body>
 
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse topnav" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -69,22 +86,22 @@
                     <li class="dropdown">
 
                     <!--dropdown setting-->
-                    <a href="#info" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list">&nbsp;Info</i></a>
+                    <a href="#info" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list">&nbsp;演講資訊</i></a>
 
                     <ul class="dropdown-menu" role="menu">
-                        <li><a role="menuitem" href="#info-speecher">speecher</a></li>
+                        <li><a role="menuitem" href="#info-speecher" align="center">講者介紹</a></li>
                     </li>
-                        <li><a role="menuitem" href="#info-speech">speech</a></li>
+                    <li><a role="menuitem" href="#info-speech" align="center">關於演講</a></li>
                     </li>
-                        <li><a role="menuitem" href="#info-info">info</a></li>
+                    <li><a role="menuitem" href="#info-info" align="center">時間地點</a></li>
                 </ul>
                 </li>
 
                 <li>
-                    <a href="#register"><i class="fa fa-pencil">&nbsp;register</i></a>
+                    <a href="#register"><i class="fa fa-pencil">&nbsp;網路報名</i></a>
                 </li>
                 <li>
-                    <a href="#contact"><i class="fa fa-facebook-square">&nbsp;Contact</i></a>
+                    <a href="#contact"><i class="fa fa-facebook-square">&nbsp;聯絡我們</i></a>
                 </li>
                 </ul>
             </div>
@@ -117,7 +134,8 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
-
+    
+	<a  name="info"></a>
 	<a  name="info-speecher"></a>
 
     <!--speecher introduction-->
@@ -153,7 +171,7 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class=section-heading">About the speech</h2>
+                    <h2 class="section-heading" data-800-top="opacity:0.2;transform:translateX(50%);"data-100-top="opacity:1; transform:translateX(0%);">關於演講</h2>
                     <p class="lead">More on this later</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
@@ -177,50 +195,24 @@
                 <div class="col-lg-12">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Related info</h2>
+                    <h2 class="section-heading"data-800-top="opacity:0.2;transform:translateX(-50%);"data-100-top="opacity:1; transform:translateX(0%);">時間地點</h2>
 
-                    <!--<div class="row" id="event-desc-row">-->
-                    <!--<div class="col-md-4 margintop30">-->
-                    <!--<div onmouseenter="tadadada(this)">-->
-                    <!--<svg id="when-img" viewBox="0 0 100 100" class="">-->
-                    <!--<circle cx="50" cy="50" r="45" id="cir1"/>-->
-                    <!--<path d="M50 50 L28.35 37.5 A25 25 0 1,1 62.5 71.65 Z" id="path1"/>-->
-                    <!--<line x1="50" y1="50" x2="28.35" y2="37.5" id="line1"/>-->
-                    <!--<line x1="50" y1="50" x2="59.19" y2="13.13" id="line1"/>-->
-                    <!--<circle cx="50" cy="11" r="3"/>-->
-                    <!--<circle cx="89" cy="50" r="3"/>-->
-                    <!--<circle cx="50" cy="89" r="3"/>-->
-                    <!--<circle cx="11" cy="50" r="3"/>-->
-                    <!--</svg></div>-->
-
-            <!--<p class="event-desc-p">2014/12/14 (日)<br>10:00開始到17:00結束</p>-->
-
-          <!--</div>-->
-          <!--<div class="col-md-4 margintop30">-->
-            <!--<svg id="location-img" viewBox="0 0 100 100" onmouseenter="tadadada(this)">-->
-              <!--<path d="M20,36 a30,30 0 1,1 60,0 q0,24 -30,54 q-30,-30 -30,-54" id="path1"/>-->
-              <!--<circle cx="50" cy="36" r="13" id="cir1"/>-->
-            <!--</svg>-->
-
-            <!--<p class="event-desc-p"> 台灣大學<br> <b>博理館</b>-101 演講廳 </p>-->
-
-          <!--</div>-->
-          <!--<div class="col-md-4 margintop30">-->
-            <!--<svg id="money-img" viewBox="0 0 100 100" onmouseenter="tadadada(this)">-->
-              <!--<circle cx="50" cy="50" r="45" id="cir1"/>-->
-              <!--<path d="M70 38 A20,12 0 1,0 50,50" id="path1"/>-->
-              <!--<path d="M30 62 A20,12 0 1,0 50,50" id="path2"/>-->
-              <!--<line x1="50" y1="18" x2="50" y2="82" id="line1"/>-->
-              <!--<line x1="90" y1="10" x2="10" y2="90" class="red-line"/>-->
-            <!--</svg>-->
-
-            <!--<p class="event-desc-p"> 報名費用？ 當然是<b>免費</b>！<br>而且還有<b>好吃的午餐</b>等著你呢！ </p>-->
-
-          <!--</div>-->
-        </div>
+                    <div class="col-md-offset-1 col-md-4 marginTop30 marginButtom30">               
+                        <div class="info-animate" data-action="rubberBand">
+                        <img src="img/clock.png" width="100%"></div>
+                    <p class="event-desc-p" align="center">2015/3/18 (三)<br>19:00開始到21:00結束</p>
+                    
+                    
+                    </div>
+                    <div class="col-md-offset-2 col-md-4 marginTop30 marginButtom30">
+                        <div class="info-animate" data-action="rubberBand">
+                        <img src="img/location.svg" width="100%" id="info-loc" href="http://getbootstrap.com/css/#grid"></div>
+                    <p class="event-desc-p" align="center">台灣大學<br>博雅102</p>
+                    </div>
+                </div>
             </div>
-        </div>
         <!-- /.container -->
+        </div>
     </div>
     <!--Info about the speech :time,location...etc end-->
 
@@ -228,23 +220,23 @@
 
     <!--registerate for the activity-->
 	<a  name="register"></a>
-    <div class="content-section-a">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">google form</h2>
-                    <p class="lead">More on this later</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="http://vp.ntu.edu.tw/VP/lgchen--1020909-01.jpg" alt="register">
-                </div>
-            </div>
+    <!--<div class="content-section-a">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-5 col-sm-6">-->
+                    <!--<hr class="section-heading-spacer">-->
+                    <!--<div class="clearfix"></div>-->
+                    <!--<h2 class="section-heading">google form</h2>-->
+                    <!--<p class="lead">More on this later</p>-->
+                <!--</div>-->
+                <!--<div class="col-lg-5 col-lg-offset-2 col-sm-6">-->
+                    <!--<img class="img-responsive" src="http://vp.ntu.edu.tw/VP/lgchen--1020909-01.jpg" alt="register">-->
+                <!--</div>-->
+            <!--</div>-->
 
-        </div>
-        <!-- /.container -->
-    </div>
+        <!--</div>-->
+        <!--[> /.container <]-->
+    <!--</div>-->
     <!--registerate for the activity end-->
 
 
@@ -285,10 +277,6 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
                             <a href="#info">Info</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
@@ -307,33 +295,27 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <!--<script src="js/smooth-scroll.js"></script>-->
+    
+    <script src="js/myHelper.js"></script>
+    <!--skrollr-->
     <script src="js/skrollr.js"></script>
     <script type="text/JavaScript">
-        /*var s = skrollr.init();*/
-         function resizePages() {
-    var h = $(window).height();
-    var height = h < 600 ? 600 : h;
-    $('section').css('height',height);
-    $('.spirits').css('height',height*1.5);
-    $('.staff').removeAttr('style');
-  }
-  resizePages();
-  if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    resizePages();
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
     var sk = skrollr.init({forceHeight:false});
     skrollr.menu.init(sk);
-  }
-  $(function(){
-    $(window).resize(function(e) {
-      resizePages();
-      sk.refresh();
+    }
+    $(function(){
+        $(window).resize(function(e) {
+            resizePages();
+            sk.refresh();
+        });
     });
-  });
     </script>
     <script src="js/skrollr.menu.js"></script>
-
+    
+    <!--animation-->
 </body>
-</div>
 
 </html>
 
