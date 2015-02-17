@@ -4,32 +4,6 @@
 <head>
    <style>
     *{ margin:0px; padding:px; border:none}
-
-    .h1-title{
-        -webkit-animation-duration: 5.0s;
-    }
-    .h1-subtitle{
-         -webkit-animation-delay:    1.0s;
-         -webkit-animation-duration: 3.0s;
-    }
-    .info-animate{
-        background: #F8F8F8;
-    }
-    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a{
-        color:#FFF;
-        width:100%;
-    }
-    /*子選單背景*/
-    .dropdown .dropdown-menu{
-        background-color:#222;
-        width:100%;
-    }
-    /*滑鼠移到子選單選項出現的背景*/
-    .dropdown .dropdown-menu > li > a:hover,
-    .dropdown-menu > li > a:focus {
-        background-image:none;
-        background-color:#006BDC;
-    }
     </style> 
     
     <!--meta definition-->
@@ -200,14 +174,16 @@
                     <div class="col-md-offset-1 col-md-4 marginTop30 marginButtom30">               
                         <div class="info-animate" data-action="rubberBand">
                         <img src="img/clock.png" width="100%"></div>
-                    <p class="event-desc-p" align="center">2015/3/18 (三)<br>19:00開始到21:00結束</p>
+                    <p class="event-desc-p" align="center">2015/3/18 (三)<br>19:00 ~ 21:00</p>
                     
                     
                     </div>
                     <div class="col-md-offset-2 col-md-4 marginTop30 marginButtom30">
                         <div class="info-animate" data-action="rubberBand">
                         <img src="img/location.svg" width="100%" id="info-loc" href="http://getbootstrap.com/css/#grid"></div>
-                    <p class="event-desc-p" align="center">台灣大學<br>博雅102</p>
+                    <p class="event-desc-p" align="center">台灣大學<br>博雅教學館102<br>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#locMap">地圖請按我</button>
+                    </p>
                     </div>
                 </div>
             </div>
@@ -218,30 +194,25 @@
 
 
 
-    <!--registerate for the activity-->
+    <!--register for the activity-->
 	<a  name="register"></a>
-    <!--<div class="content-section-a">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-lg-5 col-sm-6">-->
-                    <!--<hr class="section-heading-spacer">-->
-                    <!--<div class="clearfix"></div>-->
-                    <!--<h2 class="section-heading">google form</h2>-->
-                    <!--<p class="lead">More on this later</p>-->
-                <!--</div>-->
-                <!--<div class="col-lg-5 col-lg-offset-2 col-sm-6">-->
-                    <!--<img class="img-responsive" src="http://vp.ntu.edu.tw/VP/lgchen--1020909-01.jpg" alt="register">-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-        <!--[> /.container <]-->
-    <!--</div>-->
+    <div class="container" id="signup-container">
+        <hr class="section">
+        <div id="signup-page1">
+        <div class="clearfix"></div>
+          <div id="signup-page1-flex" class="signup-page-flex">
+            <div id="signup-up">  </div>
+            <div id="signup-content">
+                <a href="https://docs.google.com/forms/d/1qh6eCS0cLoJ9dCXsdFMdSEmel6pqKgheclZonZl9GBk/viewform?usp=send_form"><button type="button" class="btn btn-primary" id="signup-button">  網路報名 </button></a>
+            </div>
+            </div>
+          </div>
+          </div>
     <!--registerate for the activity end-->
 
 
 
-
+    <!--contact info-->
 	<a  name="contact"></a>
     <div class="banner">
 
@@ -265,6 +236,8 @@
 
     </div>
     <!-- /.banner -->
+
+
 
     <!-- Footer -->
     <footer>
@@ -290,6 +263,32 @@
         </div>
     </footer>
 
+
+
+
+    <!--Map Madal-->
+    <div class="modal fade" id="locMap">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">位置</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Boya.jpg" width="100%" height="100%">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+    <!--JavaScript-->
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -313,8 +312,6 @@
     });
     </script>
     <script src="js/skrollr.menu.js"></script>
-    
-    <!--animation-->
 </body>
 
 </html>
